@@ -1,7 +1,8 @@
 "use client"
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import {Menu, X } from "lucide-react"
 import styles from "./letter-nav.module.css"
+import Link from "next/link"
 
 interface LetterNavProps {
   letters: string[]
@@ -19,14 +20,14 @@ export function LetterNav({ letters }: LetterNavProps) {
         <nav className={styles.sidebar}>
           <h3 className={styles.indexTitle}>Index</h3>
           {letters.map((letter) => (
-            <a
+            <Link
               key={letter}
               href={`#letter-${letter}`}
               className={styles.letterLink}
               onClick={() => setOpen(false)}
             >
               {letter}
-            </a>
+            </Link>
           ))}
         </nav>
       )}

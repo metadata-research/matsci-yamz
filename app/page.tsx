@@ -149,9 +149,9 @@ export default async function Home() {
               <img src="https://drexel.edu/~/media/Images/cci/Faculty/Greenberg_Small.ashx?h=188&w=124&hash=0D28C7AE5AE230487F8321021C6263F290601CA5" alt="Jane Greenberg" className={styles.aboutPhoto} />
               <p className={styles.aboutBody}>
                 Jane Greenberg is the Alice B. Kroeger Professor and Director of the{" "}
-                <a href="https://drexel.edu/cci/research/metadata-research-center/" className={styles.aboutLink}>
+                <Link href="https://drexel.edu/cci/research/metadata-research-center/" className={styles.aboutLink}>
                   Metadata Research Center
-                </a>{" "}
+                </Link>{" "}
                 at the College of Computing &amp; Informatics, Drexel University. Her research
                 activities focus on metadata, knowledge organization/semantics, linked data, data
                 science, and information economics. She serves on the advisory board of the Dublin
@@ -166,7 +166,7 @@ export default async function Home() {
                 Metadata Vocabulary for Materials Science&rdquo; at the Metadata and Semantics Research
                 Conference held in Thessaloniki, Greece, December 15&ndash;19. They presented findings on a
                 recent proof of concept study which investigated the functionality of the{" "}
-                <a href="/terms" className={styles.aboutLink}>MatSci-YAMZ</a> application.
+                <Link href="/terms" className={styles.aboutLink}>MatSci-YAMZ</Link> application.
               </p>
               <img src="https://drexel.edu/~/media/Images/cci/PhDStudents/McClellan_Scott_sitecore.ashx?h=167&w=110&hash=259783F2DD86B998AF4A45E9449D4882B7DE8078" alt="Team member" className={styles.aboutPhoto} />
             </div>
