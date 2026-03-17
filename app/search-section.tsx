@@ -7,7 +7,7 @@ import { SearchIcon } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
-export const SearchSection = () => {
+export const SearchSection = ({ hideResults = false }: { hideResults?: boolean }) => {
   const [query, setQuery] = useState("")
   const router = useRouter()
 
@@ -18,18 +18,29 @@ export const SearchSection = () => {
     }
   )
 
+  const handleSearch = () => {
+    router.push(`/terms?q=${encodeURIComponent(query)}`)
+  }
+
   return (
     <div className="max-w-xl w-full space-y-2">
       <div className="relative h-[36px] bg-card rounded-md">
         <SearchIcon className="size-4 absolute left-2.5 top-1/2 -translate-y-1/2" />
         <Input
-          className="absolute inset-0 pl-8"
+          className="absolute inset-0 pl-8 pr-24"
           placeholder="Search to get started..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && handleSearch()}
         />
+        <button
+          onClick={handleSearch}
+          className="absolute right-1 top-1/2 -translate-y-1/2 h-[28px] px-3 bg-white text-black text-sm rounded-md border border-gray-200 shadow-sm cursor-pointer hover:bg-gray-50"
+        >
+          Search
+        </button>
       </div>
-      {data?.map((item) => (
+      {!hideResults && data?.map((item) => (
         <Card
           onClick={() => router.push(`/definition/${item.id}`)}
           className="!gap-0 !p-2 cursor-pointer"
@@ -39,7 +50,7 @@ export const SearchSection = () => {
           <p>{item.definition}</p>
         </Card>
       ))}
-      {data?.length === 0 && (
+      {!hideResults && data?.length === 0 && (
         <div className="text-sm text-center py-12">no results found</div>
       )}
     </div>

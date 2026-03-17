@@ -15,24 +15,22 @@ import { Suspense } from "react";
 import { Button } from "./ui/button";
 import { UserCircleIcon } from "lucide-react";
 import { LogoutButton } from "./logout";
+import styles from "./header.module.css"
 
 export const Header = () => {
   return (
-    <header className="flex items-center gap-2 sm:gap-4 p-2 bg-background border-b border-border whitespace-nowrap">
-      <Link href="/" className="font-bold">
+    <header className={styles.navbar}>
+      <img src="/favicon.ico" alt="MatSci YAMZ" className={styles.logo} />
+      <Link href="/" className={styles.logoText}>
         MatSci YAMZ
       </Link>
-      <div className="flex gap-2">
-        <Link href="/search">Search</Link>
-        <Link href="/terms">Browse</Link>
-        <Link href="/add">Add</Link>
-        <Link href="/tags">Tags</Link>
-      </div>
-      <div className="flex-1 min-w-0" />
-      <div className="flex gap-2">
-
+      <div className={styles.spacer} />
+      <div className={styles.navLinks}>
+        <Link href="/search" className={styles.navButton}>Search</Link>
+        <Link href="/terms" className={styles.navButton}>Browse</Link>
+        <Link href="/add" className={styles.navButton}>Add</Link>
+        <Link href="/tags" className={styles.navButton}>Tags</Link>
         <ThemeToggle />
-
         <Suspense fallback={null}>
           <AuthSection />
         </Suspense>
@@ -84,7 +82,7 @@ const AuthSection = async () => {
 
   return (
     <Link href={OAuthURL}>
-      <Button variant="outline">Login</Button>
+      <Button variant="outline" className={styles.navButton}>Login</Button>
     </Link>
   );
 };
