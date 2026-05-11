@@ -164,7 +164,7 @@ export default async function Home() {
 
             <div className={styles.aboutPersonReverse}>
               <p className={styles.aboutBody}>
-                Scott McClellan is a doctoral candidate at Drexel University studying materials science researchers' 
+                Scott McClellan is a doctoral candidate at Drexel University studying materials science researchers{"'"} 
                 use of metadata in repositories. He also works with ontologies and controlled vocabulary construction to 
                 improve FAIR-ness of data for scientific research. Prior to coming to Drexel, he studied modern American 
                 poetry and literature.presented {" "}
