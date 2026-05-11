@@ -1,3 +1,5 @@
+import type { Metadata } from "next"
+export const metadata: Metadata = { title: "Add Definition | MatSci YAMZ" }
 import { auth } from "@/lib/auth";
 import { DefineTermForm } from "./form";
 import { HydrateClient, trpc } from "@/trpc/server";

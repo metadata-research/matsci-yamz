@@ -36,12 +36,14 @@ export default async function Home() {
               also contribute by refining existing entries or adding new terms to
               expand the shared vocabulary.
             </p>
+          </div>
+          <div className={styles.getStartedActions}>
             <Link href={OAuthURL}>
               <button className={styles.loginButton}>Login</button>
             </Link>
-          </div>
-          <div className={styles.getStartedSearch}>
-            <SearchSection hideResults />
+            <div className={styles.getStartedSearch}>
+              <SearchSection hideResults />
+            </div>
           </div>
         </section>
 
@@ -149,7 +151,7 @@ export default async function Home() {
               <img src="https://drexel.edu/~/media/Images/cci/Faculty/Greenberg_Small.ashx?h=188&w=124&hash=0D28C7AE5AE230487F8321021C6263F290601CA5" alt="Jane Greenberg" className={styles.aboutPhoto} />
               <p className={styles.aboutBody}>
                 Jane Greenberg is the Alice B. Kroeger Professor and Director of the{" "}
-                <Link href="https://drexel.edu/cci/research/metadata-research-center/" className={styles.aboutLink}>
+                <Link href="https://mrc.cci.drexel.edu/" className={styles.aboutLink}>
                   Metadata Research Center
                 </Link>{" "}
                 at the College of Computing &amp; Informatics, Drexel University. Her research
@@ -162,17 +164,37 @@ export default async function Home() {
 
             <div className={styles.aboutPersonReverse}>
               <p className={styles.aboutBody}>
-                Robert Sammarco and Jane Greenberg presented &ldquo;Human-in-the-Loop and AI: Crowdsourcing
-                Metadata Vocabulary for Materials Science&rdquo; at the Metadata and Semantics Research
-                Conference held in Thessaloniki, Greece, December 15&ndash;19. They presented findings on a
-                recent proof of concept study which investigated the functionality of the{" "}
+                Scott McClellan is a doctoral candidate at Drexel University studying materials science researchers' 
+                use of metadata in repositories. He also works with ontologies and controlled vocabulary construction to 
+                improve FAIR-ness of data for scientific research. Prior to coming to Drexel, he studied modern American 
+                poetry and literature.presented {" "}
                 <Link href="/terms" className={styles.aboutLink}>MatSci-YAMZ</Link> application.
               </p>
               <img src="https://drexel.edu/~/media/Images/cci/PhDStudents/McClellan_Scott_sitecore.ashx?h=167&w=110&hash=259783F2DD86B998AF4A45E9449D4882B7DE8078" alt="Team member" className={styles.aboutPhoto} />
             </div>
 
+            <p className={styles.aboutBody}>
+              Learn more about our team at the{" "}
+              <Link href="https://mrc.cci.drexel.edu/" className={styles.aboutLink}>
+                Metadata Research Center
+              </Link>.
+            </p>
+
           </div>
         </section>
+
+        {/* Homepage Footer */}
+        <footer className={styles.homeFooter}>
+          <img
+            src="https://mrc.cci.drexel.edu/wp-content/uploads/2020/09/MRCPrimaryTransparent-01-e1600272545375.png"
+            alt="Drexel University Metadata Research Center"
+            className={styles.footerMrcLogo}
+          />
+             <div className={styles.footerNsfBlock}>
+            <img src="/NSF_Logo.jpg" alt="National Science Foundation" className={styles.footerNsfLogo} />
+            <span className={styles.footerOac}>OAC#2118201</span>
+          </div>
+        </footer>
       </main>
     </HydrateClient>
   )

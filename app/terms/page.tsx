@@ -1,3 +1,5 @@
+import type { Metadata } from "next"
+export const metadata: Metadata = { title: "Browse Terms | MatSci YAMZ" }
 import { db, definitionsTable, termsTable } from "@yamz/db"
 import { asc, eq, sql } from "drizzle-orm"
 import Link from "next/link"

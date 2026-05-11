@@ -59,6 +59,22 @@
   background-color: #E2F600;
 }
 
+@media (max-width: 768px) {
+  .logoText {
+    display: none;
+  }
+
+  .navLinks {
+    gap: 6px;
+  }
+
+  .navButton {
+    padding: 0 10px;
+    font-size: 12px;
+    height: 30px;
+  }
+}
+
 /* Dark mode */
 :global(.dark) .navButton {
   background-color: #2a3050;

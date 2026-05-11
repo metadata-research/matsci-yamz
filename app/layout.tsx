@@ -10,13 +10,13 @@ import { Open_Sans } from "next/font/google";
 const robotoSerif = Roboto_Serif({
   variable: "--font-roboto-serif",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "600", "700"],
 });
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${robotoSerif.variable} ${openSans.variable} h-screen antialiased bg-[rgba(50,61,97,0.21)] flex flex-col text-foreground`}
+        className={`${robotoSerif.variable} ${openSans.variable} min-h-screen antialiased bg-[rgba(50,61,97,0.21)] flex flex-col text-foreground`}
       >
         <TRPCProvider>
           <ThemeProvider
@@ -41,7 +41,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Header />
-            <div className="flex-1 overflow-auto">{children}</div>
+            <div className="flex-1 overflow-x-hidden">{children}</div>
             <Toaster />
           </ThemeProvider>
         </TRPCProvider>

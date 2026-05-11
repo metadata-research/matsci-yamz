@@ -1,3 +1,5 @@
+import type { Metadata } from "next"
+export const metadata: Metadata = { title: "Tags | MatSci YAMZ" }
 import { TagModal } from "@/components/tags/create-modal";
 import { db, tagsTable } from "@yamz/db";
 import { asc } from "drizzle-orm";
