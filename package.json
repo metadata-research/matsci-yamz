@@ -12,6 +12,7 @@
     "db:push": "drizzle-kit push",
     "db:drop": "drizzle-kit drop",
     "db:generate": "drizzle-kit generate",
+    "db:check": "drizzle-kit check",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
