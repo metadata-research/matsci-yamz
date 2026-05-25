@@ -9,11 +9,11 @@ Description=MatSci YAMZ Service
 After=network.target multi-user.target
 
 [Service]
-Environment="NVM_DIR=/home/matsci_yamz/.nvm"
+Environment=""
 WorkingDirectory=/home/matsci_yamz/code
 User=matsci_yamz
 Group=www-data
-ExecStart=/bin/bash -c 'source $NVM_DIR/nvm.sh && pnpm start'
+ExecStart=/bin/bash -c 'pnpm start'
 Restart=always
 
 [Install]
