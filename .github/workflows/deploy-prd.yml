@@ -1,14 +1,14 @@
 name: Deploy to Production
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
 
 jobs:
   deploy:
-    runs-on: [self-hosted, matsci-yamz-runner]
-    
+    runs-on: self-hosted
     steps:
       - name: Pull latest main branch changes
         run: |
