@@ -18,7 +18,7 @@ jobs:
 
       - name: Stop yamz service
         run: |
-          sudo service matsci_yamz stop
+          service matsci_yamz stop
 
       - name: Install dependencies
         run: |
@@ -34,4 +34,4 @@ jobs:
 
       - name: Start Service
         run: |
-          sudo service matsci_yamz start
+          service matsci_yamz start
