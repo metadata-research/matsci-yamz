@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working_directory: /home/matsci_yamz/code
+        working-directory: /home/matsci_yamz/code
 
     steps:
       - name: Pull latest main branch changes
