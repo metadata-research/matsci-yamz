@@ -1,4 +1,3 @@
-
 # Contributing
 
 To make changes to the Matsci YAMZ repository, follow these steps to ensure they get deployed safely and properly.
